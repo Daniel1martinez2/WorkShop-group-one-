@@ -18,4 +18,8 @@ Requerimientos no funcionales
 RNF1. Se debe usar el efecto Parallax
 RNF2. Las interacciones deben ser evidentes para el   “lector”, mediante el uso de patrones de diseño. 
 
+-------------------------------
+Entidades: 
+E1. Juego
+E2. Objetos
 
