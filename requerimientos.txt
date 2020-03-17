@@ -5,9 +5,15 @@ R1. El juego debe representar una escena del cuento
 R2. El Lector debe interactuar con al menos 5 elementos mencionados en el cuento. 
 R3. El juego debe tener objetos interactuables
 R4. Los objetos se deben crear a partir de un archivo txt
-R5. 
+R5. El juego debe tener 4 pantallas
+R6. las interacciones deben tener un hilo conductor
+R7. 
 
+--------------------------------
 Requerimientos no funcionales
----------
-Pan inicio, pan instrucciones, pan esc 1, pan esc2, pan resumen (reset)
+RNF1. Se debe usar el efecto Parallax
+RNF2. Las interacciones deben ser evidentes para el   “lector”
+
+---------pantallas
+Pan inicio, pan esc 1, pan esc2, pan resumen (reset)
 ---------  
