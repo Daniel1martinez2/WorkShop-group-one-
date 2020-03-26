@@ -13,6 +13,6 @@ class GameScreen{
         fondo2 = loadImage("images/scenary2.jpg");
     }
     pintarFondo1(){
-        
+        fi
     }
 }

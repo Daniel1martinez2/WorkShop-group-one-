@@ -4,6 +4,9 @@ class ResumeView{
         this.fondo3=[]; 
         this.contador3; 
     }
+    cargarImagenesRS(){
+        
+    }
     pintarFondo(){
         
     }
