@@ -4,7 +4,7 @@ constructor(){
     this.fondo2=[]; 
     this.contador1; 
     this.fondo1;
-    this.startController = new StartController();//esto va en el mvc??
+    this.startController = new StartController();
 }
 clickP1View(){
     startController.StartController();

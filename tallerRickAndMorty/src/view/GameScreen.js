@@ -11,8 +11,10 @@ class GameScreen{
             fondo[i]=loadImage("Rick-Lab/lab"+" "+"("+i+").jpg");
         }
         fondo2 = loadImage("images/scenary2.jpg");
+
+
     }
     pintarFondo1(){
-        fi
+        
     }
 }
