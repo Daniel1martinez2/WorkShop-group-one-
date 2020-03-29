@@ -1,4 +1,4 @@
-class Object{
+class Object_1{
     constructor(posX,posY){
         this.app; 
         this.toco; 

@@ -3,13 +3,13 @@ let startScreen = new StartScreen();
 let pantalla = 0;
 
     function preload(){
-
+        startScreen.cargarImagenesSC();
     }
     function settings(){
-     createCanvas(800, 423);
+        
     }
     function setup(){
-        //startScreen.cargarImagenesSC();
+        createCanvas(800, 423);
     }
 
     function draw(){
@@ -20,7 +20,7 @@ let pantalla = 0;
             break;
 
             case 1:
-
+            background(0,0,55);
             break;
         }
     }

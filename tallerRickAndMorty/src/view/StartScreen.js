@@ -16,10 +16,10 @@ clickP1View(){
     }
 
 cargarImagenesSC(){
-    fondo1 = loadImage("images/pantallaIni.jpg");
+    this.fondo1 = loadImage("images/pantallaIni.jpg");
 }
 pintarFondo2(){
-    image(fondo1, 0, 0);
+    image(this.fondo1, 0, 0);
 }
     
 
