@@ -1,20 +1,18 @@
-class MainView{
-    constructor(){
-        this.screen; 
-        this.startScreen = new StartScreen();
-        this.pantalla = 0;
-    }
-    preload(){
+let screen; 
+let startScreen = new StartScreen();
+let pantalla = 0;
+
+    function preload(){
 
     }
-    settings(){
+    function settings(){
      createCanvas(800, 423);
     }
-    setup(){
-        startScreen.cargarImagenesSC();
+    function setup(){
+        //startScreen.cargarImagenesSC();
     }
 
-    draw(){
+    function draw(){
         console.log("corro");
         switch(pantalla){//aqui esta variable de pantalla la setteo - la getteo?
             case 0:
@@ -26,7 +24,7 @@ class MainView{
             break;
         }
     }
-    mousePressed(){
+    function mousePressed(){
         switch(pantalla){
             case 0:
             startScreen.clickP1View();//click para pasar a GameScreen
@@ -38,8 +36,7 @@ class MainView{
             break;
     }
 }
-    keyPressed(){
+function keyPressed(){
         
     }
 
-}
