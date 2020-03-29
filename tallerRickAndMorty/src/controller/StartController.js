@@ -3,9 +3,7 @@ class StartController{
         this.app; 
         this.logic = new Logic();
     }
-    clickP1Controller(){
-        logic.clickPantalla1();
-    }
+    
     mouse(algo,algo2){
 
     }
