@@ -1,3 +1,7 @@
+
+Grupo: Daniel Martinez, Alejandro Valverde, Miguel Olivares
+
+
 Contexto: 
 El programa debe representar una escena de un cuento, permitiendo interacciones con él mouse o teclado con sus elementos principales, modificando características como la visibilidad, posición, tamaño, entre otros patrones de diseño;  brindando así una experiencia más inmeresiva para el lector con el cuento.
 
