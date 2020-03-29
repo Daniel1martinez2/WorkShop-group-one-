@@ -1,33 +1,42 @@
 let screen; 
 let startScreen = new StartScreen();
-let pantalla = 0;
+let gameScreen = new GameScreen();
+let pantalla ;
+let ani2;
 
     function preload(){
         startScreen.cargarImagenesSC();
+        gameScreen.cargarImagenesGS();
     }
     function settings(){
         
     }
     function setup(){
-        createCanvas(800, 423);
+        createCanvas(1000, 530);
+        this.pantalla = 0;
+        this.ani2 = false;
     }
 
     function draw(){
-        console.log("corro");
-        switch(pantalla){//aqui esta variable de pantalla la setteo - la getteo?
+        //console.log("corro");
+        switch(this.pantalla){//aqui esta variable de pantalla la setteo - la getteo?
             case 0:
             startScreen.pintarFondo2();
             break;
 
             case 1:
-            background(0,0,55);
+            gameScreen. pintarFondo1();
             break;
         }
     }
-    function mousePressed(){
-        switch(pantalla){
+    function mouseClicked(){
+        switch(this.pantalla){
             case 0:
-            startScreen.clickP1View();//click para pasar a GameScreen
+                console.log("fwefw");
+            if(mouseX>284 && mouseX<516 && mouseY>341 && mouseY<381){
+                this.pantalla = 1;
+                this.ani2 = true;
+            }
             
             break;
 

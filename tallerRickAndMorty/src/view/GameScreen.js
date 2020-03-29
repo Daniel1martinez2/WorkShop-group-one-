@@ -2,19 +2,25 @@ class GameScreen{
     constructor(){
         this.app; 
         this.fondo= []; 
-        this.contador1; 
+        this.contador1 = 1;
         this.fondo2;
 
     }
     cargarImagenesGS(){
         for(let i=1;i<119;i++) {
-            fondo[i]=loadImage("Rick-Lab/lab"+" "+"("+i+").jpg");
+            this.fondo[i]=loadImage("Rick-Lab/lab"+" "+"("+i+").jpg");
         }
-        fondo2 = loadImage("images/scenary2.jpg");
+        this.fondo2 = loadImage("images/scenary2.jpg");
 
 
     }
     pintarFondo1(){
-        
+        image(this.fondo[this.contador1], 0, 0,1000,530);
+		if(frameCount %2==0) {
+            this.contador1 ++;
+			if(this.contador1>115) {
+				this.contador1=1;
+			}
+		}
     }
 }
