@@ -2,28 +2,29 @@ let screen;
 let startScreen = new StartScreen();
 let gameScreen = new GameScreen();
 let pantalla ;
+//var introSound;
 
 
 
     function preload(){
         startScreen.cargarImagenesSC();
         gameScreen.cargarImagenesGS();
+        //this.introSound = loadSound("sfx/IntroSound.mp3");
     }
-    function settings(){
-        
-    }
+   
     function setup(){
         createCanvas(1000, 530);
         this.pantalla = 0;
-  
-      
+        
     }
-
+    
     function draw(){
         //console.log("corro");
         switch(this.pantalla){
             case 0:
             startScreen.pintarFondo2();
+            //this.introSound.play();
+                
             fill(255);
            // text("X: "+mouseX+ " Y: "+mouseY,mouseX,mouseY);
             break;
