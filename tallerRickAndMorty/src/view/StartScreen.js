@@ -6,7 +6,7 @@ constructor(){
     this.fondo1;
     this.start1;
     this.start2;
-    this.startController = new StartController();
+    this.startController =  new StartController();
     //this.mainView = new MainView();
     this.estado= false; 
    
@@ -39,6 +39,7 @@ pintarFondo2(){
             image(this.start2, width/2-85, 450); 
 
         }
+        
 
 }
     

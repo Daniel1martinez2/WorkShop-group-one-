@@ -1,11 +1,13 @@
 class Logic{
     constructor(){
-        this.rickAndMorty; 
+        this.rickAndMorty = new RickYMorty(); 
         this.txtOriginal=[]; 
         this.arma; 
         this.semillas=[]; 
         this.ganaste ;
-        this.rick; 
+        this.rick;
+        
+     
 
     }
 
@@ -19,13 +21,13 @@ class Logic{
         
     }
 
-    prueba(){
-        let nuevo; 
-        nuevo= new rickAndMorty(100,100); 
-        nuevo.pintar(); 
-
+    test1DrawAnObject(){
        
+        console.log(2+2); 
+        this.rickAndMorty.pintar(); 
 
     }
+
+ 
     
 }
