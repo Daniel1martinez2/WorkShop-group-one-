@@ -35,7 +35,7 @@ pintarFondo2(){
         image(this.start2, width/2-85, 450);
         }*/
 
-        if(this.estado){
+        if(this.contador2 ==125&&this.estado){
             image(this.start2, width/2-85, 450); 
 
         }

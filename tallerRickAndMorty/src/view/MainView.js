@@ -2,7 +2,7 @@ let screen;
 let startScreen = new StartScreen();
 let gameScreen = new GameScreen();
 let pantalla ;
-let ani2;
+
 
 
     function preload(){
@@ -15,7 +15,7 @@ let ani2;
     function setup(){
         createCanvas(1000, 530);
         this.pantalla = 0;
-        this.ani2 = false;
+  
       
     }
 
@@ -36,10 +36,10 @@ let ani2;
     function mouseClicked(){
         switch(this.pantalla){
             case 0:
-                console.log("fwefw");
+                console.log("confirmoClick");
             if(mouseX>400 && mouseX<530 && mouseY>436 && mouseY<503){
                 this.pantalla = 1;
-                this.ani2 = true;//mirar si esto va a tenr alguna funcion, sino quitar
+              
             }
             
             break;
@@ -57,6 +57,10 @@ function mouseMoved(){
             } else {
                 startScreen.estado= false; 
             }
+            break; 
+            case 1:
+
+            break;
 }
 }
 function keyPressed(){

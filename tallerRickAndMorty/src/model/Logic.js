@@ -5,6 +5,7 @@ class Logic{
         this.arma; 
         this.semillas=[]; 
         this.ganaste ;
+        this.rick; 
 
     }
 
@@ -16,6 +17,15 @@ class Logic{
     }
     guardarNuevo(){
         
+    }
+
+    prueba(){
+        let nuevo; 
+        nuevo= new rickAndMorty(100,100); 
+        nuevo.pintar(); 
+
+       
+
     }
     
 }
