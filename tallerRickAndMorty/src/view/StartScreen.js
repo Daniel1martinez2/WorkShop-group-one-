@@ -8,6 +8,7 @@ constructor(){
     this.start2;
     this.startController = new StartController();
     //this.mainView = new MainView();
+    this.estado= false; 
    
 }
 
@@ -33,6 +34,11 @@ pintarFondo2(){
     /*if(this.contador2 ==125 && this.mainView.getboton1() ==true){
         image(this.start2, width/2-85, 450);
         }*/
+
+        if(this.estado){
+            image(this.start2, width/2-85, 450); 
+
+        }
 
 }
     

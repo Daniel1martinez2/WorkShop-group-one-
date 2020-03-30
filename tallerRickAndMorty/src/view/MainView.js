@@ -3,7 +3,7 @@ let startScreen = new StartScreen();
 let gameScreen = new GameScreen();
 let pantalla ;
 let ani2;
-let boton1;
+
 
     function preload(){
         startScreen.cargarImagenesSC();
@@ -16,7 +16,7 @@ let boton1;
         createCanvas(1000, 530);
         this.pantalla = 0;
         this.ani2 = false;
-        this.boton1 = false;
+      
     }
 
     function draw(){
@@ -53,9 +53,9 @@ function mouseMoved(){
     switch (this.pantalla) {
         case 0:
             if (mouseX>400 && mouseX<530 && mouseY>436 && mouseY<503) {
-                boton1 = true;
+              startScreen.estado= true; 
             } else {
-                boton1 = false;
+                startScreen.estado= false; 
             }
 }
 }
