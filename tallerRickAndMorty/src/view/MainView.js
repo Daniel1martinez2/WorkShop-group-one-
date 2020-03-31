@@ -17,7 +17,7 @@ var introSound;
         this.pantalla = 0;
         
         introSound.play();
-        introSound.setVolume(0.2); 
+        introSound.setVolume(0.5); 
 
        
      
