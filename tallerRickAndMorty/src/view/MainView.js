@@ -2,28 +2,34 @@ let screen;
 let startScreen = new StartScreen();
 let gameScreen = new GameScreen();
 let pantalla ;
-//var introSound;
+var introSound;
 
 
 
     function preload(){
         startScreen.cargarImagenesSC();
         gameScreen.cargarImagenesGS();
-        //this.introSound = loadSound("sfx/IntroSound.mp3");
+       this.introSound = loadSound("sfx/IntroSound.mp3");
     }
    
     function setup(){
         createCanvas(1000, 530);
         this.pantalla = 0;
         
+        introSound.play();
+        introSound.setVolume(0.2); 
+
+       
+     
     }
     
     function draw(){
         //console.log("corro");
         switch(this.pantalla){
             case 0:
+                
             startScreen.pintarFondo2();
-            //this.introSound.play();
+            
                 
             fill(255);
            // text("X: "+mouseX+ " Y: "+mouseY,mouseX,mouseY);
@@ -37,6 +43,7 @@ let pantalla ;
     function mouseClicked(){
         switch(this.pantalla){
             case 0:
+             
                 console.log("confirmoClick");
             if(mouseX>400 && mouseX<530 && mouseY>436 && mouseY<503){
                 this.pantalla = 1;
