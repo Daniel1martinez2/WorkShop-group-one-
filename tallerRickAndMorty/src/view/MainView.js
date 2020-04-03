@@ -12,7 +12,7 @@ var introSound;
        this.introSound = loadSound("sfx/IntroSound.mp3");
     }
    
-    function setup(){
+    function  setup(){
         createCanvas(1000, 530);
         this.pantalla = 0;
         
