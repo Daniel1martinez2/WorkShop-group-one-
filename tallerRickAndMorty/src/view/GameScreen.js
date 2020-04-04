@@ -31,4 +31,7 @@ class GameScreen{
     cargarTXT(){
         this.gameController.cargarTXT();
     }
-}
+    recorrerTXT()
+{
+    this.gameController.recorrerTXT();
+}}

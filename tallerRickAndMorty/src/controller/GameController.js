@@ -2,7 +2,6 @@ class GameController{
     constructor(){
         this.logic = new Logic() ;
         this.app; 
-        this.logic.recorrerTXT();
         console.log("entro al contro");
     }
     dibujar(){
@@ -13,5 +12,8 @@ class GameController{
     }
     cargarTXT(){
         this.logic.cargarTXT();
+    }
+    recorrerTXT(){
+        this.logic.recorrerTXT();
     }
 }
