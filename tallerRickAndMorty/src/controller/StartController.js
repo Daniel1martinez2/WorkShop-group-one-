@@ -1,7 +1,6 @@
 class StartController{
     constructor(){
         this.app; 
-        this.logic = new Logic() ;
        
     }
     

@@ -5,7 +5,8 @@ class GameScreen{
         this.portal = [];
         this.contador1 = 1;
         this.fondo2;
-
+        this.gameController = new GameController();
+        console.log("entro");
     }
     cargarImagenesGS(){
         for(let i=1;i<119;i++) {
@@ -26,5 +27,8 @@ class GameScreen{
 				this.contador1=1;
 			}
 		}
+    }
+    cargarTXT(){
+        this.gameController.cargarTXT();
     }
 }

@@ -10,14 +10,15 @@ var introSound;
         startScreen.cargarImagenesSC();
         gameScreen.cargarImagenesGS();
        this.introSound = loadSound("sfx/IntroSound.mp3");
+       
     }
    
     function  setup(){
         createCanvas(1000, 530);
         this.pantalla = 0;
-        
+        gameScreen.cargarTXT();
         introSound.play();
-        introSound.setVolume(0.2); 
+        introSound.setVolume(0.5); 
 
        
      
