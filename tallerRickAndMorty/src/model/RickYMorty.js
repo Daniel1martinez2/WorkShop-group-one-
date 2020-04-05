@@ -4,7 +4,8 @@ class RickYMorty{
         this.tengoArma; 
         this.muñecos; 
         this.posX= posX; 
-        this.posY= posY; 
+        this.posY= posY;
+        this.meToca = false;
 
     }
 
