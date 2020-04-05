@@ -19,8 +19,17 @@ class Logic{
     }
     recorrerTXT(){
         this.ensayo = join(this.txtOriginal, " ");
-        this.ensa = split(this.ensayo, " ");
-        console.log(this.ensa[1]);
+        //this.ensa = split(this.ensayo, " ");
+        if (this.ensayo.includes("Rick and morty")) {
+            console.log("Si hay rick")
+        }
+        if (this.ensayo.includes("mega semillas")) {
+            console.log("Si hay mega semillas")
+        }
+        if (this.ensayo.includes("arma portal")) {//Aquí creamos por tal y arma
+            console.log("Si hay arma portal")
+        }
+
     }
     guardarNuevo(){
         
