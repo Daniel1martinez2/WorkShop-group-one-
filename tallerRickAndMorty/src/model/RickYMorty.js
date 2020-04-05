@@ -1,6 +1,6 @@
 class RickYMorty{
     constructor(posX,posY){
-        this.app = new p5(); 
+   
         this.tengoArma; 
         this.muñecos; 
         this.posX= posX; 
@@ -10,7 +10,7 @@ class RickYMorty{
     }
 
     pintar(img){
-        this.app.image(img,this.posX,this.posY,parseInt(250/1.2),parseInt(420/1.2)); 
+      image(img,this.posX,this.posY,parseInt(250/1.2),parseInt(420/1.2)); 
         //this.app.ellipse(100,100,100,100); 
     }
 

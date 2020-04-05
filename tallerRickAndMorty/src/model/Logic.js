@@ -1,6 +1,6 @@
 class Logic{
     constructor(){
-        this.rickAndMorty = new RickYMorty(0,150); 
+        
         this.txtOriginal = []; 
         this.ensayo;
         this.ensa = [];
@@ -22,6 +22,7 @@ class Logic{
         //this.ensa = split(this.ensayo, " ");
         if (this.ensayo.includes("Rick and morty")) {
             console.log("Si hay rick")
+            this.rickAndMorty = new RickYMorty(200,150); 
         }
         if (this.ensayo.includes("mega semillas")) {
             console.log("Si hay mega semillas")
