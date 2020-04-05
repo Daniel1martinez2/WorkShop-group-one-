@@ -74,6 +74,8 @@ function mouseMoved(){
 }
 }
 function keyPressed(){
+    gameScreen.teclas(key); 
+    
         
     }
 

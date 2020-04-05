@@ -16,6 +16,7 @@ class GameScreen{
             this.portal[i]=loadImage("Portal/portal"+" "+"("+i+").png");
         }
         this.fondo2 = loadImage("images/scenary2.jpg");
+        
 
 
     }
@@ -26,12 +27,19 @@ class GameScreen{
 			if(this.contador1>115) {
 				this.contador1=1;
 			}
-		}
+        }
+        this.gameController.dibujar(); 
     }
     cargarTXT(){
         this.gameController.cargarTXT();
     }
-    recorrerTXT()
-{
+    recorrerTXT(){
     this.gameController.recorrerTXT();
-}}
+}
+    teclas(c){
+        this.gameController.mover(c); 
+        
+    }
+
+
+}

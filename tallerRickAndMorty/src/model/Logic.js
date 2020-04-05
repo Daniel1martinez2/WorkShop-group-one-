@@ -1,17 +1,17 @@
 class Logic{
     constructor(){
-        this.rickAndMorty = new RickYMorty(); 
+        this.rickAndMorty = new RickYMorty(0,150); 
         this.txtOriginal = []; 
         this.ensayo;
         this.ensa = [];
         this.arma; 
         this.semillas=[]; 
         this.ganaste ;
-        this.rick
+        this.rickImage; 
             }
     cargarTXT() {
         this.txtOriginal = loadStrings("data/Import/cuento.txt");
-        
+        this.rickImage = loadImage("img/ricknormi.png"); 
     }
 
     toqueObjeto(){
@@ -29,8 +29,12 @@ class Logic{
     test1DrawAnObject(){
        
         console.log(2+2); 
-        this.rickAndMorty.pintar(); 
+        this.rickAndMorty.pintar(this.rickImage ); 
 
+    }
+
+    muevoRick(c){
+        this.rickAndMorty.move(c); 
     }
 
  

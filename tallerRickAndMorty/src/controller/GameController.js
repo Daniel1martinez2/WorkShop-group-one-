@@ -5,10 +5,11 @@ class GameController{
         console.log("entro al contro");
     }
     dibujar(){
+        this.logic.test1DrawAnObject(); 
 
     }
-    mover(){
-        
+    mover(c){
+        this.logic.muevoRick(c); 
     }
     cargarTXT(){
         this.logic.cargarTXT();
