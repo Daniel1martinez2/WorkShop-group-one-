@@ -5,10 +5,15 @@ class Logic{
         this.ensayo;
         this.ensa = [];
         this.arma; 
-        this.semillas=[]; 
+        this.semillas=[5]; 
         this.ganaste ;
-        this.rickImage; 
-            }
+        this.rickImage;
+        this.imagenSemillas = [];
+        this.imagenSemillasfeed = [];
+        this.pistolaImagen = [];
+        this.gun;
+
+        }
     cargarTXT() {
         this.txtOriginal = loadStrings("data/Import/cuento.txt");
         this.rickImage = loadImage("img/ricknormi.png"); 
@@ -26,9 +31,17 @@ class Logic{
         }
         if (this.ensayo.includes("mega semillas")) {
             console.log("Si hay mega semillas")
+            this.semillas[0];
+            this.semillas[1];
+            this.semillas[2];
+            this.semillas[3];
+            this.semillas[4];
         }
         if (this.ensayo.includes("arma portal")) {//Aquí creamos por tal y arma
             console.log("Si hay arma portal")
+             
+            this.gun;
+
         }
 
     }
