@@ -5,7 +5,7 @@ class PreIntro{
 
     }
     cargarImagenesPI(){
-    for(let i=1;i<280;i++) {
+    for(let i=1;i<383;i++) {
         this.fondo3[i]=loadImage("preGame/preIntro"+" "+"("+i+").jpg");
     }
     }
@@ -14,8 +14,8 @@ class PreIntro{
         image(this.fondo3[this.contador3], 0, 0);
     if(frameCount %4==0) {
         this.contador3 ++;
-        if(this.contador3>273) {
-            this.contador3=273;
+        if(this.contador3>380) {
+            this.contador3=380;
         }
     }
     }

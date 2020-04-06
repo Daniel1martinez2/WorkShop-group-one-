@@ -41,7 +41,7 @@ var introSound;
 
             case 1:
             preIntro.pintarFondo3(); 
-            if(preIntro.contador3==273){
+            if(preIntro.contador3==380){
                 this.pantalla=2;
             }  
             break;
