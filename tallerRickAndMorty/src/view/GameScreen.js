@@ -19,7 +19,6 @@ class GameScreen{
         this.fondo2 = loadImage("images/scenary2.jpg");
         this.mesa = loadImage("images/mesa.png");
 
-
     }
     pintarFondo1(){
         image(this.fondo[this.contador1], 0, 0,1000,530);
@@ -29,6 +28,7 @@ class GameScreen{
 				this.contador1=1;
 			}
         }
+        image(this.fondo2,0,0, 1000, 530);
         this.gameController.dibujar(); 
         image(this.mesa,0,0);
     }
