@@ -19,7 +19,7 @@ var introSound;
     function  setup(){
         createCanvas(1000, 530);
         gameScreen.recorrerTXT();
-        this.pantalla = 0;
+        this.pantalla = 2;
         introSound.play();
         introSound.setVolume(0.5); 
 
