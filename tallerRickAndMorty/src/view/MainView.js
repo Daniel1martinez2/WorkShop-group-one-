@@ -1,6 +1,7 @@
 let screen; 
 let startScreen = new StartScreen();
 let gameScreen = new GameScreen();
+let preIntro = new PreIntro();
 let pantalla ;
 var introSound;
 
@@ -9,6 +10,7 @@ var introSound;
     function preload(){
         startScreen.cargarImagenesSC();
         gameScreen.cargarImagenesGS();
+        preIntro.cargarImagenesPI();
         gameScreen.cargarTXT();
        this.introSound = loadSound("sfx/IntroSound.mp3");
        
@@ -38,6 +40,13 @@ var introSound;
             break;
 
             case 1:
+            preIntro.pintarFondo3(); 
+            if(preIntro.contador3==273){
+                this.pantalla=2;
+            }  
+            break;
+                
+            case 2:       
             gameScreen. pintarFondo1();
             break;
         }

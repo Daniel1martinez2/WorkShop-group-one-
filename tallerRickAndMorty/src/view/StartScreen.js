@@ -1,6 +1,5 @@
 class StartScreen{
 constructor(){
-    this.app; 
     this.fondo2=[]; 
     this.contador2 = 1; 
     this.fondo1;
