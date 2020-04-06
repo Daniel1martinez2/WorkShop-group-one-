@@ -19,10 +19,15 @@ class RickYMorty{
             case 'd':
                 console.log("muevorick"); 
                 this.posX+=30; 
+                console.log(this.posX);
                 break;
             case 'a':
                 console.log("muevorick"); 
-                this.posX-=30; 
+                if(this.posX<200){
+                    this.posX = 170;
+                }else{
+                    this.posX-=30; 
+                }
                 break;
         
             default:

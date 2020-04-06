@@ -22,7 +22,7 @@ class Logic{
         //this.ensa = split(this.ensayo, " ");
         if (this.ensayo.includes("Rick and morty")) {
             console.log("Si hay rick")
-            this.rickAndMorty = new RickYMorty(200,150); 
+            this.rickAndMorty = new RickYMorty(170,150); 
         }
         if (this.ensayo.includes("mega semillas")) {
             console.log("Si hay mega semillas")

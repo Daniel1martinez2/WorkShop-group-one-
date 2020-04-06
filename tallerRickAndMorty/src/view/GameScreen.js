@@ -5,6 +5,7 @@ class GameScreen{
         this.portal = [];
         this.contador1 = 1;
         this.fondo2;
+        this.mesa;
         this.gameController = new GameController();
         console.log("entro");
     }
@@ -16,7 +17,7 @@ class GameScreen{
             this.portal[i]=loadImage("Portal/portal"+" "+"("+i+").png");
         }
         this.fondo2 = loadImage("images/scenary2.jpg");
-        
+        this.mesa = loadImage("images/mesa.png");
 
 
     }
@@ -29,6 +30,7 @@ class GameScreen{
 			}
         }
         this.gameController.dibujar(); 
+        image(this.mesa,0,0);
     }
     cargarTXT(){
         this.gameController.cargarTXT();
