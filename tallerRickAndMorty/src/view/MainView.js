@@ -29,6 +29,7 @@ var introSound;
     
     function draw(){
         //console.log("corro");
+
         switch(this.pantalla){
             case 0:
                 
@@ -48,6 +49,9 @@ var introSound;
                 
             case 2:       
             gameScreen. pintarFondo1();
+            if (gameScreen.getTimer()<110){
+                //this.pantalla=1; 
+            }
             break;
         }
     }

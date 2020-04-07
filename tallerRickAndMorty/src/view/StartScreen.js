@@ -30,9 +30,7 @@ pintarFondo2(){
     if(this.contador2 ==125){
     image(this.start1, width/2-85, 450);
     }
-    /*if(this.contador2 ==125 && this.mainView.getboton1() ==true){
-        image(this.start2, width/2-85, 450);
-        }*/
+  
 
         if(this.contador2 ==125&&this.estado){
             image(this.start2, width/2-85, 450); 

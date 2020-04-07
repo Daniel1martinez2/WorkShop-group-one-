@@ -29,6 +29,10 @@ class Logic{
         this.semilla5; 
         this.semilla5Feed;
 
+        this.dimension = true;  //nueva variable
+
+        this.contador; 
+
 
         }
     cargarTXT() {
@@ -51,7 +55,6 @@ class Logic{
         this.semilla4= loadImage("Objetos/Semillas-4.png") ; 
         this.semilla4Feed= loadImage("Objetos/SemillasFeed-4.png"); 
 
-
     }
 
     toqueObjeto(){
@@ -67,11 +70,11 @@ class Logic{
         if (this.ensayo.includes("mega semillas")) {
             this.semillas=[5]; 
             console.log("Si hay mega semillas")
-            this.semillas[0]=new Seed(400,200,this.semilla1,this.semilla1Feed); 
-            this.semillas[1]=new Seed(350,200,this.semilla2,this.semilla2Feed);
-            this.semillas[2]=new Seed(330,200,this.semilla3,this.semilla3Feed);
-            this.semillas[3]=new Seed(240,200,this.semilla4,this.semilla4Feed);
-            this.semillas[4]=new Seed(200,200,this.semilla5,this.semilla5Feed);
+            this.semillas[0]=new Seed(249,64,this.semilla1,this.semilla1Feed); 
+            this.semillas[1]=new Seed(393,54,this.semilla2,this.semilla2Feed);
+            this.semillas[2]=new Seed(949,443,this.semilla3,this.semilla3Feed);
+            this.semillas[3]=new Seed(691,275,this.semilla4,this.semilla4Feed);
+            this.semillas[4]=new Seed(125,441,this.semilla5,this.semilla5Feed);
         }
         if (this.ensayo.includes("arma portal")) {//Aquí creamos por tal y arma
             console.log("Si hay arma portal")
@@ -88,16 +91,13 @@ class Logic{
     test1DrawAnObject(){
         this.rickAndMorty.pintar( ); 
         this.rickAndMorty.sensibleArea(); 
-        
-       for (let i = 0; i < this.semillas.length; i++) {
+        if(this.dimension){  
+          for (let i = 0; i < this.semillas.length; i++) {
           this.semillas[i].pintar(); 
           this.semillas[i].sensibleArea(); 
-
-           
+        }
+  
        }
-
-   
-
     }
 
     muevoRick(c){
@@ -107,6 +107,10 @@ class Logic{
     tocoalgo(){
         
     }
+
+    getDimension() {
+		return this.dimension;
+	}
  
     
 }

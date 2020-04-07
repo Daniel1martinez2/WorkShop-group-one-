@@ -5,18 +5,17 @@ class RickYMorty extends Object_1{
         this.tengoArma; 
         this.muñecos; 
         this.meToca = false;
-
     }
-
-  
-
     move(c){
         switch (c) {
             case 'd':
-               
                 this.posX+=30; 
-                
                 break;
+            case 'w':
+          
+            break;
+
+
             case 'a':
                
                 if(this.posX<200){

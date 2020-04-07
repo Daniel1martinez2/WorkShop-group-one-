@@ -17,4 +17,7 @@ class GameController{
     recorrerTXT(){
         this.logic.recorrerTXT();
     }
+    getDimension(){
+        return this.logic.getDimension(); 
+    }
 }

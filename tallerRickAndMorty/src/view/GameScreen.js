@@ -8,6 +8,9 @@ class GameScreen{
         this.mesa;
         this.gameController = new GameController();
         console.log("entro");
+        this.ultimo; 
+        this.maximo = 120000;
+        this.mastempo = 0; 
     }
     cargarImagenesGS(){
         for(let i=1;i<119;i++) {
@@ -20,7 +23,16 @@ class GameScreen{
         this.mesa = loadImage("images/mesa.png");
 
     }
+    cargarTXT(){
+        this.ultimo = millis(); 
+        this.gameController.cargarTXT();
+    }
     pintarFondo1(){
+        
+    
+
+        
+
         image(this.fondo[this.contador1], 0, 0,1000,530);
 		if(frameCount %2==0) {
             this.contador1 ++;
@@ -28,19 +40,35 @@ class GameScreen{
 				this.contador1=1;
 			}
         }
-        image(this.fondo2,0,0, 1000, 530);
+        if(this.gameController.getDimension()){
+            image(this.fondo2,0,0, 1000, 530);
+        }
+        
         this.gameController.dibujar(); 
         image(this.mesa,0,0);
+        //---------------
+        if(this.gameController.getDimension()){
+           
+           
+             this.pasado = millis() - this.ultimo;
+             this.restante = (this.maximo - this.pasado) / 1000;
+
+            fill(0);
+            textSize(20);  
+            this.timer = parseInt(this.restante) + parseInt(this.mastempo); 
+            text(this.timer,460,60); 
+            }
     }
-    cargarTXT(){
-        this.gameController.cargarTXT();
-    }
+  
     recorrerTXT(){
     this.gameController.recorrerTXT();
 }
     teclas(c){
         this.gameController.mover(c); 
         
+    }
+    getTimer(){
+        return this.timer; 
     }
 
 
