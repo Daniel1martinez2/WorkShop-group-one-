@@ -70,6 +70,9 @@ var introSound;
             case 1:
 
             break;
+            case 2:
+                gameScreen.tocoAlgo();  
+            break; 
     }
 }
 function mouseMoved(){

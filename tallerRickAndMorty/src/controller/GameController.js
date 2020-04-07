@@ -20,4 +20,7 @@ class GameController{
     getDimension(){
         return this.logic.getDimension(); 
     }
+    tocoAlgo(){
+        this.logic.tocoalgo(); 
+    }
 }

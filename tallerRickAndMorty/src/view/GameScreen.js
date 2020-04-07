@@ -45,7 +45,9 @@ class GameScreen{
         }
         
         this.gameController.dibujar(); 
+        if(this.gameController.getDimension()== false){
         image(this.mesa,0,0);
+        }
         //---------------
         if(this.gameController.getDimension()){
            
@@ -69,6 +71,9 @@ class GameScreen{
     }
     getTimer(){
         return this.timer; 
+    }
+    tocoAlgo(){
+        this.gameController.tocoAlgo(); 
     }
 
 
