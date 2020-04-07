@@ -1,13 +1,13 @@
 class Object_1{
-    constructor(posX,posY,imagen,feedImage,toco,selected){
+    constructor(posX,posY,imagen,feedImage){
         this.app; 
-        this.toco = toco; 
+        this.toco = false; 
         this.imagen = imagen; 
         this.feedImage = feedImage; 
         this.posX= posX; 
         this.posY= posY; 
         this.mensaje; 
-        this.selected = selected; 
+        this.selected = false; 
         this.areaSensible;
         this.cambioenX = parseInt(250/1.1); 
         this.cambioenY= parseInt(420/1.2); 

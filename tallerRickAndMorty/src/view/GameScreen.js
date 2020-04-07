@@ -44,7 +44,7 @@ class GameScreen{
             image(this.fondo2,0,0, 1000, 530);
         }
         
-        this.gameController.dibujar(); 
+        
         if(this.gameController.getDimension()== false){
         image(this.mesa,0,0);
         }
@@ -55,11 +55,17 @@ class GameScreen{
              this.pasado = millis() - this.ultimo;
              this.restante = (this.maximo - this.pasado) / 1000;
 
-            fill(0);
+            fill(255);
             textSize(20);  
             this.timer = parseInt(this.restante) + parseInt(this.mastempo); 
-            text(this.timer,460,60); 
+            text(this.timer,740,50); 
+
+            fill(255);
+            textSize(20);   
+            text(this.gameController.getContadorSem(),800,50); 
             }
+            
+            this.gameController.dibujar(); 
     }
   
     recorrerTXT(){
@@ -74,6 +80,9 @@ class GameScreen{
     }
     tocoAlgo(){
         this.gameController.tocoAlgo(); 
+    }
+    contaSemillas(){
+        this.gameController.contaSemillas();
     }
 
 

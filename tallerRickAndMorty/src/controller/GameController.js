@@ -23,4 +23,10 @@ class GameController{
     tocoAlgo(){
         this.logic.tocoalgo(); 
     }
+    contaSemillas(){
+        this.logic.contaSemillas();
+    }
+    getContadorSem(){
+        return this.logic.getContadorSem();
+    }
 }

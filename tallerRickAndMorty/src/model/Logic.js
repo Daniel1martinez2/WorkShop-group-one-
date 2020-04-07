@@ -14,6 +14,8 @@ class Logic{
         this.pistolaImagen = [];
         this.gun;
 
+        this.contadorSemillas = 0;
+
         this.semilla1; 
         this.semilla1Feed;
 
@@ -69,11 +71,11 @@ class Logic{
         if (this.ensayo.includes("mega semillas")) {
             this.semillas=[5]; 
             console.log("Si hay mega semillas")
-            this.semillas[0]=new Seed(249,64,this.semilla1,this.semilla1Feed,false,false); 
-            this.semillas[1]=new Seed(393,54,this.semilla2,this.semilla2Feed,false,false);
-            this.semillas[2]=new Seed(949,443,this.semilla3,this.semilla3Feed,false,false);
-            this.semillas[3]=new Seed(691,275,this.semilla4,this.semilla4Feed,false,false);
-            this.semillas[4]=new Seed(125,441,this.semilla5,this.semilla5Feed,false,false);
+            this.semillas[0]=new Seed(249,64,this.semilla1,this.semilla1Feed); 
+            this.semillas[1]=new Seed(393,54,this.semilla2,this.semilla2Feed);
+            this.semillas[2]=new Seed(948,440,this.semilla3,this.semilla3Feed);
+            this.semillas[3]=new Seed(690,275,this.semilla4,this.semilla4Feed);
+            this.semillas[4]=new Seed(125,441,this.semilla5,this.semilla5Feed);
             
         }
         if (this.ensayo.includes("arma portal")) {//Aquí creamos por tal y arma
@@ -84,23 +86,18 @@ class Logic{
         }
 
     }
-    guardarNuevo(){
-        
-    }
+   
 
     test1DrawAnObject(){
         
         this.rickAndMorty.pintar( ); 
         this.rickAndMorty.sensibleArea(); 
+
         if(this.dimension){  
           for (let i = 0; i < this.semillas.length; i++) {
-          
-          
-          
           if(this.semillas[i].getSelected()==false){
             this.semillas[i].pintar(); 
           }
-        
           this.semillas[i].sensibleArea(); 
         }
   
@@ -115,19 +112,60 @@ class Logic{
 
         for (let i = 0; i < this.semillas.length; i++) {
            this.semillas[i].tocoClick(); 
-        
-           
           }
-          
-
-          
+        
+        this.rickAndMorty.tocoClick();
+ 
     }
 
     getDimension() {
 		return this.dimension;
-	}
- 
+    }
     
+    contaSemillas(){
+        this.contadorSemillas = 0;
+        console.log("Cuento semillas")
+        for (let s = 0; s < this.semillas.length; s++) {
+            if (this.semillas[s].getSelected()== true) {
+            this.contadorSemillas++;    
+            } 
+        }
+        
+    }
+    getContadorSem(){
+        return this.contadorSemillas;
+    }
+ 
+    modificarTxt(){
+
+        if (this.rickAndMorty.getSelected()) {
+            let palabras = "Rick and morty";
+            this.ensayo.replace(palabras,palabras.toUpperCase());
+        }
+        for(let se = 0;se < this.semillas.length;se++){
+
+            let palabras = "mega semillas";
+            this.ensayo.replace(palabras,palabras.toUpperCase());
+            if(this.semillas[se].getSelected()){
+
+                break;
+            }
+
+        } 
+        
+        if(this.gun.getSelected()){
+            let palabras = "arma portal";
+            this.ensayo.replace(palabras,palabras.toUpperCase());
+        }
+
+    }
+
+
+    guardarNuevoTxt(){
+
+        saveStrings(this.ensayo, '../data/Import/CuentoModificado.txt');
+        
+    }
 }
 
 

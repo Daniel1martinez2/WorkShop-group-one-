@@ -71,7 +71,8 @@ var introSound;
 
             break;
             case 2:
-                gameScreen.tocoAlgo();  
+                gameScreen.tocoAlgo();
+                gameScreen.contaSemillas(); 
             break; 
     }
 }
