@@ -46,5 +46,9 @@ class DimensionController{
     drawPortal(){
         this.logic.drawPortal();
     }
+    getPaso(){
+        return this.logic.paso;
+     }
+  
    
 }
