@@ -49,6 +49,9 @@ class Object_1{
 
 
     }
+    getAreaSensible(){
+        return this.areaSensible;
+    }
     getToco(){
         return this.toco; 
     }
@@ -57,4 +60,10 @@ class Object_1{
     }
     pintarMensaje(){}
     
+    getPosX(){
+        return this.posX;
+    }
+    getPosY(){
+        return this.posY;
+    }
 }

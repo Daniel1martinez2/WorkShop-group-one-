@@ -19,6 +19,14 @@ class GameController{
     tocoAlgo(){
         this.logic.tocoalgo(); 
     }
+     pintarPortal(b){
+         if(b == ' '){
+        this.logic.pintarPortal(true);
+         }
+    }
+    drawPortal(){
+        this.logic.drawPortal();
+    }
     
    
 }

@@ -38,5 +38,11 @@ class DimensionController{
         this.logic.recorrerTXTDimension();
         this.logic.recorrerTXT();
     }
+    pintarPortal(b){
+        this.logic.pintarPortal(b);
+    }
+    drawPortal(){
+        this.logic.drawPortal();
+    }
    
 }

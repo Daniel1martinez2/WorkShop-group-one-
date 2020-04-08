@@ -2,7 +2,6 @@ class GameScreen{
     constructor(){
         this.app; 
         this.fondo= []; 
-        this.portal = [];
         this.contador1 = 1;
         this.mesa;
         this.gameController = new GameController();
@@ -12,9 +11,6 @@ class GameScreen{
         for(let i=1;i<119;i++) {
             this.fondo[i]=loadImage("Rick-Lab/lab"+" "+"("+i+").jpg");
         } 
-           for(let i=1;i<211;i++) {//portal
-            this.portal[i]=loadImage("Portal/portal"+" "+"("+i+").png");
-        }
         
         this.mesa = loadImage("images/mesa.png");
 
@@ -33,6 +29,7 @@ class GameScreen{
         image(this.mesa,0,0);
       
             this.gameController.dibujar(); 
+        this.gameController.drawPortal();
     }
   
     recorrerTXT(){
@@ -40,7 +37,7 @@ class GameScreen{
 }
     teclas(c){
         this.gameController.mover(c); 
-        
+        this.gameController.pintarPortal(c);
     }
     
     tocoAlgo(){

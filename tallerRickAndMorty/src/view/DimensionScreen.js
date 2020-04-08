@@ -6,12 +6,20 @@ class DimensionScreen{
         this.ultimo; 
         this.maximo = 120000;
         this.mastempo = 0; 
+        this.fuente;
+        this.oscu1;
+        this.oscu2;
+        this.oscu3;
     }
     cargaImagenesDS(){
         this.fondo2 = loadImage("images/dimension.jpg");
         this.arbusto = loadImage("images/arbusto.png");
+        this.oscu1 = loadImage("images/oscu1.jpg");
+        this.oscu2 = loadImage("images/oscu2.jpg");
+        this.oscu3 = loadImage("images/oscu3.jpg");
         this.dimensionController.cargaSemillas();
         this.ultimo = millis(); 
+        this.fuente = loadFont("Fuentes/misfitsA.otf");
     }
     cargarTXT(){
         this.dimensionController.cargarTXT(); 
@@ -21,6 +29,15 @@ class DimensionScreen{
     }
     pintarDimension(){
         image(this.fondo2,0,0);
+        if(this.timer<90){
+            image(this.oscu1,0,0);
+        }
+        if(this.timer<70){
+            image(this.oscu2,0,0);
+        }
+        if(this.timer<50){
+            image(this.oscu3,0,0);
+        }
         
         this.dimensionController.drawSemillas();
         this.dimensionController.dibujar2();
@@ -32,14 +49,16 @@ class DimensionScreen{
             this.restante = (this.maximo - this.pasado) / 1000;
 
            fill(255);
-           textSize(20);  
+           textSize(22); 
+           textFont(this.fuente); 
            this.timer = parseInt(this.restante) + parseInt(this.mastempo); 
-           text(this.timer,740,50); 
-
+           text("Tiempo restante: " + this.timer,740,50); 
+            
            fill(255);
-           textSize(20);   
-           text(this.dimensionController.getContadorSem(),935,48); 
+           textSize(22);   
+           text(this.dimensionController.getContadorSem(),935,50); 
            }
+           
 
     }
     teclasDS(c){
@@ -47,9 +66,6 @@ class DimensionScreen{
     }
     contaSemillas(){
         this.dimensionController.contaSemillas();
-    }
-    tocoSemillas(){
-        this.dimensionController.tocoSemillas();
     }
     tocoAlgo(){
         this.dimensionController.tocoAlgo(); 
