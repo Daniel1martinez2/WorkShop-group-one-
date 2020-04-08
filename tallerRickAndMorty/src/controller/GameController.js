@@ -12,9 +12,11 @@ class GameController{
     }
     cargarTXT(){
         this.logic.cargarTXT();
+        this.logic.cargaSemillas();
     }
     recorrerTXT(){
         this.logic.recorrerTXT();
+        this.logic.recorrerTXTDimension();
     }
     tocoAlgo(){
         this.logic.tocoalgo(); 
