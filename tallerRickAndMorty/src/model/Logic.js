@@ -5,7 +5,7 @@ class Logic {
         this.ensayo;
         this.ensa = [];
         this.arma;
-        this.nuevoTXT=[];
+        this.nuevoTXT = [];
 
         this.ganaste;
         this.rickImage;
@@ -43,6 +43,11 @@ class Logic {
         this.paso2 = false;
 
         this.gano = false;
+
+        this.toquerick = true;
+        this.toquesemillas = true;
+        this.toquearma = true;
+
 
 
     }
@@ -82,8 +87,8 @@ class Logic {
     }
     recorrerTXT() {
         this.ensayo = join(this.txtOriginal, " ");
-        
-        console.log (this.ensayo);
+
+        console.log(this.ensayo);
 
         if (this.ensayo.includes("Rick and morty")) {
             console.log("Si hay rick")
@@ -112,7 +117,7 @@ class Logic {
         }
     }
     pistolaRick() {
-       // consoleconsole.log((this.rickAndMorty.getPosX() + 40));
+        // consoleconsole.log((this.rickAndMorty.getPosX() + 40));
         //console.log(this.gun.getPosX());
         if (this.rickAndMorty.getAreaSensible() && this.gun.getSelected() == true) {
             this.rickAndMorty.setTengoArma(true);
@@ -135,28 +140,28 @@ class Logic {
     }
     drawPortal() {
         if (this.rickAndMorty.tengoArma == true) {
-            this.gun.drawGate1(0,-275);
+            this.gun.drawGate1(0, -275);
         }
     }
     pintarPortal(b) {
         this.gun.setPintoSalida(b);
 
     }
-    cambioPantalla(){
-        if(this.rickAndMorty.getPosX() >=600 && this.paso2 ==false){
+    cambioPantalla() {
+        if (this.rickAndMorty.getPosX() >= 600 && this.paso2 == false) {
             this.gun.setPintoSalida(false);
             this.paso = true;
         }
     }
-    cambioPantalla2(){
-        if(this.rickAndMorty.getPosX() >=600 ){
+    cambioPantalla2() {
+        if (this.rickAndMorty.getPosX() >= 600) {
             this.gun.setPintoSalida(false);
             this.paso2 = true;
             this.recorrerTXT();
             this.guardarNuevoTxt();
         }
     }
-   
+
     drawSemillas() {
         if (this.dimension) {
             for (let i = 0; i < this.semillas.length; i++) {
@@ -182,7 +187,7 @@ class Logic {
         for (let i = 0; i < this.semillas.length; i++) {
             this.semillas[i].tocoClick();
         }
-        this.modificarTxt();
+
     }
 
     getDimension() {
@@ -204,59 +209,72 @@ class Logic {
     }
 
     modificarTxt() {//este metodo no esta en los controllers, va?
+        console.log("Modificare el tct")
 
-        if (this.rickAndMorty.getSelected()) {
-            let palabras = "Rick and morty";
-            this.ensayo.replace(palabras, palabras.toUpperCase());
-        }
-        for (let se = 0; se < this.semillas.length; se++) {
-
-            
-            if (this.semillas[se].getSelected()) {
-                let palabras = "mega semillas";
-                this.ensayo.replace(palabras, palabras.toUpperCase());
-                break;
-            }
-
-        }
-
-        if (this.gun.getSelected()) {
-            let palabras = "arma portal";
-            this.ensayo.replace(palabras, palabras.toUpperCase());
-        }
 
     }
     guardarNuevoTxt() {//este tampoco
         //this.ensa = split(this.ensayo, " ");
+        if (this.toquerick) {
+            this.ensayo.replace("Rick and morty", "RICK AND MORTY");
+            console.log(this.ensayo);
+        }
+
+
+
+        if (this.toquesemillas) {
+            let palabras = "mega semillas";
+            this.ensayo.replace(palabras, palabras.toUpperCase());
+
+        }
+
+
+
+        if (this.toquearma) {
+            let palabras = "arma portal";
+            this.ensayo.replace(palabras, palabras.toUpperCase());
+        }
+
+        this.modificarTxt();
         console.log(this.ensayo)
         this.nuevoTXT[0] = this.ensayo;
         saveStrings(this.nuevoTXT, 'CuentoModificado.txt');
 
     }
 
-    getGano(){
+    getGano() {
         return this.gano;
     }
 
-    pintarResume(){
+    pintarResume() {
         if (this.rickAndMorty.getSelected()) {
-            
+
         }
         for (let se = 0; se < this.semillas.length; se++) {
 
-            
+
             if (this.semillas[se].getSelected()) {
-                
+
             }
 
         }
 
         if (this.gun.getSelected()) {
-            
+
         }
 
     }
-  
+    setToquearma(n) {
+        this.toquearma = n;
+    }
+    setToqueRick(n) {
+        this.toquerick = n;
+    }
+    setToqueaSemilla(n) {
+        this.toquesemillas = n;
+    }
+
+
 
 }
 

@@ -24,6 +24,7 @@ class DimensionController{
     }
     contaSemillas(){//ya
         this.logic.contaSemillas();
+        this.logic.setToqueaSemilla(true);
     }
     getContadorSem(){//ya
         return this.logic.getContadorSem();
@@ -41,6 +42,8 @@ class DimensionController{
     pintarPortal(d){
         if(d == ' '){
             this.logic.pintarPortal(true);
+            this.logic.setToqueRick(true);
+            this.logic.setToquearma(true)
         }
     }
     drawPortal(){

@@ -11,6 +11,7 @@ class ResumeScreen{
         this.botonTXT;
         this.botonTXTF;
         this.tocoBoton = false;
+        this.imagenObjetos;
         
     }
     cargarImagenesRS(){
@@ -24,16 +25,13 @@ class ResumeScreen{
         this.perdiste = loadImage("images/perdiste.png");
         this.botonTXT = loadImage("images/botonNuevotxt.png");
         this.botonTXTF = loadImage("images/botonNuevotxtFeed.png");
+        this.imagenObjetos = loadImage("Objetos/todoslosobjetos.png");;
     }
     pintarResume(){
 
         image(this.fondoFondo,0,0);
-        if (this.tocoBoton) {
-            image(this.botonTXTF,370,430);
-        }else{
-
-            image(this.botonTXT,370,430);
-        }
+        image(this.imagenObjetos,0,0);
+        
         
 
         image(this.fondo3[this.contador3], 0, this.posYimagenes,1000,530);
@@ -75,21 +73,7 @@ class ResumeScreen{
         }
     }
 
-    guardarTXT(){
-        console.log("Valido guardarTXT")
-        if((mouseX > 370 && mouseX <(370+this.botonTXT.width) && mouseY > 430 && mouseY < (430+this.botonTXT.height))){
-            this.resumeController.guardarTXT();
-        }
-    }
-    moveBoton(){
-        if((mouseX > 370 && mouseX <(370+this.botonTXT.width) && mouseY > 430 && mouseY < (430+this.botonTXT.height))){
-
-            console.log("Valido Feed boton txt")
-            this.tocoBoton = true;
-        }else{
-            this.tocoBoton = false;
-        }       
-    }
+    
     cargarTXT(){
         resumeController.cargarTXT();
     }

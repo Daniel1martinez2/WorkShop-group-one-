@@ -54,7 +54,6 @@ function draw() {
 
         case 2:   //garaje    
             gameScreen.pintarFondo1();
-            gameScreen.setUltimo(millis()); 
             //console.log(gameScreen.getPaso())
             if(gameScreen.getPaso() == true){
                 this.pantalla = 3;
@@ -135,7 +134,7 @@ function mouseMoved() {
             break;
 
         case 4:
-            resumeScreen.moveBoton();
+
         break;
     }
 }
@@ -150,7 +149,6 @@ function mouseWheel(){
             resumeScreen.parallax(event.delta);
             break;
        
-    }
-       
+    }   
 }
 

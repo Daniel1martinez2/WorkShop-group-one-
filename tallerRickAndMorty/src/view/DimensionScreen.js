@@ -4,7 +4,7 @@ class DimensionScreen {
         this.fondo2;
         this.arbusto;
         this.ultimo;
-        this.maximo = 10000;
+        this.maximo = 100000;
         this.mastempo = 0;
         this.fuente;
         this.oscu1;
