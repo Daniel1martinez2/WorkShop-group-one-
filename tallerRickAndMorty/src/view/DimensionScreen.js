@@ -59,6 +59,7 @@ class DimensionScreen{
            text(this.dimensionController.getContadorSem(),935,50); 
            }
            this.dimensionController.drawPortal();
+           this.dimensionController.cambioPantalla2();
 
            
 
@@ -80,6 +81,9 @@ class DimensionScreen{
 
     getTimer(){
         return this.timer; 
+    }
+    getPaso2(){
+        return this.dimensionController.getPaso2();
     }
    
 }
