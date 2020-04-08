@@ -113,14 +113,16 @@ class Logic{
     muevoRick(c){
         this.rickAndMorty.move(c); 
     }
-    tocoSemillas(){
-        for (let i = 0; i < this.semillas.length; i++) {
-           this.semillas[i].tocoClick(); 
-          }
-
-    }
+    
+    
+    
     tocoalgo(){
         this.rickAndMorty.tocoClick();
+
+        for (let i = 0; i < this.semillas.length; i++) {
+            this.semillas[i].tocoClick(); 
+        }
+        
     }
 
     getDimension() {
