@@ -65,7 +65,11 @@ class DimensionScreen{
     }
     teclasDS(c){
         this.dimensionController.mover(c);
-        this.dimensionController.pintarPortal(c);
+        if(this.dimensionController.getContadorSem()==5){
+              this.dimensionController.pintarPortal(c);
+
+        }
+      
     }
     contaSemillas(){
         this.dimensionController.contaSemillas();
