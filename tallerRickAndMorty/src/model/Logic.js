@@ -93,19 +93,19 @@ class Logic{
     }
 
     test1DrawAnObject(){
-        
+      
         this.rickAndMorty.pintar(); 
         this.rickAndMorty.sensibleArea(); 
 
     }
     drawSemillas(){
         if(this.dimension){  
-           // for (let i = 0; i < this.semillas.length; i++) {
-            //if(this.semillas[i].getSelected()==false){
-              //this.semillas[i].pintar(); 
-            //}
-           // this.semillas[i].sensibleArea(); 
-         // }
+           for (let i = 0; i < this.semillas.length; i++) {
+            if(this.semillas[i].getSelected()==false){
+              this.semillas[i].pintar(); 
+            }
+            this.semillas[i].sensibleArea(); 
+          }
     
          }
     }
@@ -169,6 +169,7 @@ class Logic{
         saveStrings(this.ensayo, '../data/Import/CuentoModificado.txt');
         
     }
+
 }
 
 

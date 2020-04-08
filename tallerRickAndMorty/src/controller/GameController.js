@@ -2,6 +2,7 @@ class GameController{
     constructor(){
         this.logic = new Logic() ;
         console.log("entro al contro");
+        
     }
     dibujar(){
         this.logic.test1DrawAnObject(); 

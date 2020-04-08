@@ -11,6 +11,9 @@ class DimensionScreen{
         this.dimensionController.cargaSemillas();
         this.ultimo = millis(); 
     }
+    cargarTXT(){
+        this.dimensionController.cargarTXT(); 
+    }
     recorrerTXTDimension(){
         this.dimensionController.recorrerTXTDimension();
     }
@@ -51,4 +54,5 @@ class DimensionScreen{
     getTimer(){
         return this.timer; 
     }
+   
 }

@@ -18,6 +18,12 @@ class DimensionController{
     dibujar2(){//ya
         this.logic.test1DrawAnObject(); 
     }
+    mover(c){
+        this.logic.muevoRick(c); 
+    }
+    cargarTXT(){
+        this.logic.cargarTXT();
+    }
     contaSemillas(){//ya
         this.logic.contaSemillas();
     }
@@ -32,5 +38,7 @@ class DimensionController{
     }
     recorrerTXTDimension(){
         this.logic.recorrerTXTDimension();
+        this.logic.recorrerTXT();
     }
+   
 }

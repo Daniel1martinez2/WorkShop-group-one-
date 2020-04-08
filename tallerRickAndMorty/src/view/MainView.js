@@ -13,6 +13,7 @@ var introSound;
         gameScreen.cargarImagenesGS();
         preIntro.cargarImagenesPI();
         gameScreen.cargarTXT();
+        dimensionScreen.cargarTXT(); 
         dimensionScreen.cargaImagenesDS();
        this.introSound = loadSound("sfx/IntroSound.mp3");
        
@@ -25,8 +26,7 @@ var introSound;
         this.pantalla = 2;
         introSound.play();
         introSound.setVolume(0.5); 
-
-       
+ 
      
     }
     
@@ -113,6 +113,7 @@ function mouseMoved(){
 }
 function keyPressed(){
     gameScreen.teclas(key); 
+    dimensionScreen.teclasDS(key); 
     
         
     }
