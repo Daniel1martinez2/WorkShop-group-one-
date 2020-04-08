@@ -91,7 +91,10 @@ class ResumeScreen{
         }       
     }
     cargarTXT(){
-        
+        resumeController.cargarTXT();
+    }
+    recorrerTXT(){
+        resumeController.recorrerTXT();
     }
 }
 
