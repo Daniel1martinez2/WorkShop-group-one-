@@ -18,9 +18,13 @@ class DimensionScreen{
         this.dimensionController.recorrerTXTDimension();
     }
     pintarDimension(){
+        image(this.fondo2,0,0);
+            
+        this.dimensionController.drawSemillas();
+        this.dimensionController.dibujar2();
+
         if(this.dimensionController.getDimension()){
-           
-           
+                   
             this.pasado = millis() - this.ultimo;
             this.restante = (this.maximo - this.pasado) / 1000;
 
@@ -31,11 +35,8 @@ class DimensionScreen{
 
            fill(255);
            textSize(20);   
-           text(this.dimensionController.getContadorSem(),800,50); 
+           text(this.dimensionController.getContadorSem(),935,48); 
            }
-        image(this.fondo2,0,0);
-        this.dimensionController.drawSemillas();
-        this.dimensionController.dibujar2();
 
     }
     teclasDS(c){

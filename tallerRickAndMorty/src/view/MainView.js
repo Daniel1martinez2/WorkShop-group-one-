@@ -23,7 +23,7 @@ var introSound;
         createCanvas(1000, 530);
         gameScreen.recorrerTXT();
         dimensionScreen.recorrerTXTDimension();
-        this.pantalla = 2;
+        this.pantalla = 3;
         introSound.play();
         introSound.setVolume(0.5); 
  
@@ -90,6 +90,7 @@ var introSound;
             break; 
                            
             case 3: //dimension
+                dimensionScreen.tocoAlgo();
                 dimensionScreen.contaSemillas(); 
                 dimensionScreen.tocoSemillas();
             break;
