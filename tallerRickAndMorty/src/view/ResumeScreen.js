@@ -44,10 +44,20 @@ class ResumeScreen{
 			}
         }
         if (this.resumeController.getGano()==true) {
-            image(this.ganaste,0,this.posYimagenes)
+          
         }else{
-            image(this.perdiste,0,this.posYimagenes)
+           // image(this.perdiste,0,this.posYimagenes)
+           
         }
+        
+    }
+    pinto1(){
+        image(this.ganaste,0,this.posYimagenes); 
+
+    }
+    pinto2(){
+        image(this.perdiste,0,this.posYimagenes); 
+
     }
 
     parallax(c){

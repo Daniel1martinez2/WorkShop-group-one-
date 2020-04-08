@@ -4,7 +4,7 @@ class DimensionScreen {
         this.fondo2;
         this.arbusto;
         this.ultimo;
-        this.maximo = 200000;
+        this.maximo = 10000;
         this.mastempo = 0;
         this.fuente;
         this.oscu1;
@@ -75,9 +75,7 @@ class DimensionScreen {
 
         }
 
-        if (c == 'f') {
-            //  this.ultimo= millis(); 
-        }
+        
 
     }
     contaSemillas() {
@@ -96,4 +94,9 @@ class DimensionScreen {
     getPaso2(){
         return this.dimensionController.getPaso2(); 
     }
+
+    getemi(){
+        return this.dimensionController.getContadorSem(); 
+    }
+    
 }

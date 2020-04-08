@@ -74,13 +74,21 @@ function draw() {
             break;
 
         case 4: //resumen
+      
             resumeScreen.pintarResume();
+            if(dimensionScreen.getemi()==5){
+                resumeScreen.pinto1(); 
+    
+            }else{
+                resumeScreen.pinto2(); 
+            }
 
         
             break;
     }
 }
 function mouseClicked() {
+    console.log(dimensionScreen.getemi()+" yaaaaaparceeee")
     switch (this.pantalla) {
         case 0:
 

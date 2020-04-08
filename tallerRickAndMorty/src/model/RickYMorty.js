@@ -35,8 +35,8 @@ class RickYMorty extends Object_1 {
 
         }
          else {
-            console.log(this.toco);
-            console.log(this.selected);
+            //console.log(this.toco);
+            //console.log(this.selected);
 
             image(this.imaP, this.posX, this.posY);
 

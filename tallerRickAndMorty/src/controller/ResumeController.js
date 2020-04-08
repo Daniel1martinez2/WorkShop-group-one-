@@ -4,10 +4,11 @@ class ResumeController{
     }
 
     getGano(){
-        console.log(this.model.gano +"triple hp");
+       
         return this.model.gano;
     }
     guardarTXT(){
         this.model.guardarNuevoTxt();
     }
+  
 }

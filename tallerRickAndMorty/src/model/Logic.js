@@ -5,7 +5,7 @@ class Logic {
         this.ensayo;
         this.ensa = [];
         this.arma;
-        this.nuevoTXT = [];
+        this.nuevoTXT=[];
 
         this.ganaste;
         this.rickImage;
@@ -82,8 +82,8 @@ class Logic {
     }
     recorrerTXT() {
         this.ensayo = join(this.txtOriginal, " ");
-
-        console.log(this.ensayo);
+        
+        console.log (this.ensayo);
 
         if (this.ensayo.includes("Rick and morty")) {
             console.log("Si hay rick")
@@ -112,7 +112,7 @@ class Logic {
         }
     }
     pistolaRick() {
-        // consoleconsole.log((this.rickAndMorty.getPosX() + 40));
+       // consoleconsole.log((this.rickAndMorty.getPosX() + 40));
         //console.log(this.gun.getPosX());
         if (this.rickAndMorty.getAreaSensible() && this.gun.getSelected() == true) {
             this.rickAndMorty.setTengoArma(true);
@@ -135,31 +135,26 @@ class Logic {
     }
     drawPortal() {
         if (this.rickAndMorty.tengoArma == true) {
-            this.gun.drawGate1(0, -275);
+            this.gun.drawGate1(0,-275);
         }
     }
     pintarPortal(b) {
         this.gun.setPintoSalida(b);
 
     }
-    cambioPantalla() {
-        if (this.rickAndMorty.getPosX() >= 600 && this.paso2 == false) {
+    cambioPantalla(){
+        if(this.rickAndMorty.getPosX() >=600 && this.paso2 ==false){
             this.gun.setPintoSalida(false);
             this.paso = true;
         }
     }
-    cambioPantalla2() {
-        if (this.rickAndMorty.getPosX() >= 600) {
+    cambioPantalla2(){
+        if(this.rickAndMorty.getPosX() >=600 ){
             this.gun.setPintoSalida(false);
             this.paso2 = true;
-            if (this.paso2 == true) {
-                this.gano = true;
-
-                console.log(this.gano + "ENTRANDO");
-            }
         }
     }
-
+   
     drawSemillas() {
         if (this.dimension) {
             for (let i = 0; i < this.semillas.length; i++) {
@@ -214,7 +209,7 @@ class Logic {
         }
         for (let se = 0; se < this.semillas.length; se++) {
 
-
+            
             if (this.semillas[se].getSelected()) {
                 let palabras = "mega semillas";
                 this.ensayo.replace(palabras, palabras.toUpperCase());
@@ -236,23 +231,25 @@ class Logic {
 
     }
 
+    getGano(){
+        return this.gano;
+    }
 
-
-    pintarResume() {
+    pintarResume(){
         if (this.rickAndMorty.getSelected()) {
-
+            
         }
         for (let se = 0; se < this.semillas.length; se++) {
 
-
+            
             if (this.semillas[se].getSelected()) {
-
+                
             }
 
         }
 
         if (this.gun.getSelected()) {
-
+            
         }
 
     }
