@@ -2,12 +2,14 @@ class DimensionScreen{
     constructor(){
         this.dimensionController = new DimensionController();
         this.fondo2;
+        this.arbusto;
         this.ultimo; 
         this.maximo = 120000;
         this.mastempo = 0; 
     }
     cargaImagenesDS(){
-        this.fondo2 = loadImage("images/scenary2.jpg");
+        this.fondo2 = loadImage("images/dimension.jpg");
+        this.arbusto = loadImage("images/arbusto.png");
         this.dimensionController.cargaSemillas();
         this.ultimo = millis(); 
     }
@@ -19,10 +21,11 @@ class DimensionScreen{
     }
     pintarDimension(){
         image(this.fondo2,0,0);
-            
+        
         this.dimensionController.drawSemillas();
         this.dimensionController.dibujar2();
-
+        image(this.arbusto,0,0);    
+        
         if(this.dimensionController.getDimension()){
                    
             this.pasado = millis() - this.ultimo;
