@@ -52,7 +52,8 @@ function draw() {
             }
             break;
 
-        case 2:   //garaje    
+        case 2:   //garaje   
+            gameScreen.setUltimo(millis());  
             gameScreen.pintarFondo1();
             //console.log(gameScreen.getPaso())
             if(gameScreen.getPaso() == true){

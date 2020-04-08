@@ -3,6 +3,7 @@ class GameScreen{
         this.app; 
         this.fondo= []; 
         this.contador1 = 1;
+        this.contador2 = 0; 
         this.mesa;
         this.gameController = new GameController();
         
@@ -10,11 +11,10 @@ class GameScreen{
         this.aviso2; 
         this.aviso3; 
         this.aviso4; 
-        this.aviso5; 
+        
 
       
        
-        this.ultimo= 0;
         
 
     }
@@ -37,6 +37,7 @@ class GameScreen{
         this.gameController.cargarTXT();
     }
     pintarFondo1(){
+
        
         image(this.fondo[this.contador1], 0, 0,1000,530);
 		if(frameCount %2==0) {
@@ -45,6 +46,10 @@ class GameScreen{
 				this.contador1=1;
 			}
         }
+        if(frameCount %23==0) {
+            this.contador2 ++;
+        }
+      
         
         this.gameController.dibujar(); 
         this.gameController.drawPortal();
@@ -53,24 +58,25 @@ class GameScreen{
         this.tempo += parseInt(this.ultimo); 
         textSize(30); 
         this.tempo = parseInt(this.ultimo/1000); 
-        text(this.tempo,200,200)
+
+       // text(this.contador2,200,200)
         this.letreros(); 
         
     }
     letreros(){
-        if (this.tempo >5 && this.tempo<12){
+        if (this.contador2 >5 && this.contador2<12){
             image(this.aviso1,0,0); 
         }
-        if (this.tempo >14 && this.tempo<25){
+        if (this.contador2 >14 && this.contador2<25){
             image(this.aviso2,0,0); 
         }
-        if (this.tempo >27 && this.tempo<38){
+        if (this.contador2 >27 && this.contador2<38){
             image(this.aviso3,0,0); 
         }
-        if (this.tempo >40 && this.tempo<50){
+        if (this.contador2 >40 && this.contador2<50){
             image(this.aviso4,0,0); 
         }
-        if (this.tempo >53 && this.tempo<63){
+        if (this.contador2 >53 && this.contador2<63){
             image(this.aviso5,0,0); 
         }
 

@@ -3,7 +3,7 @@ class DimensionScreen {
         this.dimensionController = new DimensionController();
         this.fondo2;
         this.arbusto;
-        this.ultimo;
+     
         this.maximo = 100000;
         this.mastempo = 0;
         this.fuente;
@@ -11,6 +11,7 @@ class DimensionScreen {
         this.oscu2;
         this.oscu3;
         this.ultimo;
+        this.aviso5; 
     }
     cargaImagenesDS() {
         this.fondo2 = loadImage("images/dimension.jpg");
@@ -18,6 +19,7 @@ class DimensionScreen {
         this.oscu1 = loadImage("images/oscu1.jpg");
         this.oscu2 = loadImage("images/oscu2.jpg");
         this.oscu3 = loadImage("images/oscu3.jpg");
+        this.aviso5= loadImage("images/aviso5.png");
         this.dimensionController.cargaSemillas();
 
 
@@ -63,6 +65,10 @@ class DimensionScreen {
         }
         this.dimensionController.drawPortal();
         this.dimensionController.cambioPantalla2(); 
+
+        if (this.timer >90 && this.timer<100){
+            image(this.aviso5,0,0); 
+        }
 
 
 
