@@ -92,5 +92,7 @@ class DimensionScreen {
     setUltimo(c) {
         this.ultimo = c;
     }
-
+    getPaso2(){
+        return this.dimensionController.getPaso2(); 
+    }
 }

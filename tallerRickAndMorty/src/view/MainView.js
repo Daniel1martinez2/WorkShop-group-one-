@@ -68,6 +68,8 @@ function draw() {
             dimensionScreen.pintarDimension();
             if (dimensionScreen.getTimer() < 0) {
                 this.pantalla = 4; //aca creo que esto pasa a la pantalla de resumen
+            }if(dimensionScreen.getPaso2()==true){
+                this.pantalla = 4;
             }
             break;
 

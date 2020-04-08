@@ -40,6 +40,7 @@ class Logic {
         this.conPisto;
         this.conPistoF;
         this.paso = false;
+        this.paso2 = false;
 
         this.gano = false;
 
@@ -142,9 +143,15 @@ class Logic {
 
     }
     cambioPantalla(){
-        if(this.rickAndMorty.getPosX() >=600 ){
+        if(this.rickAndMorty.getPosX() >=600 && this.paso2 ==false){
             this.gun.setPintoSalida(false);
             this.paso = true;
+        }
+    }
+    cambioPantalla2(){
+        if(this.rickAndMorty.getPosX() >=600 ){
+            this.gun.setPintoSalida(false);
+            this.paso2 = true;
         }
     }
    

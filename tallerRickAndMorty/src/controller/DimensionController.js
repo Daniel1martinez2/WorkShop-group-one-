@@ -49,6 +49,10 @@ class DimensionController{
     getPaso(){
         return this.logic.paso;
      }
+
+     getPaso2(){
+         return this.logic.paso2; 
+     }
   
    
 }
