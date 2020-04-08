@@ -2,6 +2,7 @@ let screen;
 let startScreen = new StartScreen();
 let gameScreen = new GameScreen();
 let preIntro = new PreIntro();
+let dimensionScreen = new DimensionScreen();
 let pantalla ;
 var introSound;
 
@@ -12,6 +13,7 @@ var introSound;
         gameScreen.cargarImagenesGS();
         preIntro.cargarImagenesPI();
         gameScreen.cargarTXT();
+        dimensionScreen.cargaImagenesDS();
        this.introSound = loadSound("sfx/IntroSound.mp3");
        
     }
@@ -19,6 +21,7 @@ var introSound;
     function  setup(){
         createCanvas(1000, 530);
         gameScreen.recorrerTXT();
+        dimensionScreen.recorrerTXTDimension();
         this.pantalla = 2;
         introSound.play();
         introSound.setVolume(0.5); 
@@ -47,11 +50,19 @@ var introSound;
             }  
             break;
                 
-            case 2:       
-            gameScreen. pintarFondo1();
-            if (gameScreen.getTimer()<110){
-                //this.pantalla=1; 
+            case 2:   //garaje    
+            gameScreen.pintarFondo1();
+            break;
+            
+            case 3: //dimension
+            dimensionScreen.pintarDimension();
+            if (dimensionScreen.getTimer()<110){
+                //this.pantalla=1; //aca creo que esto pasa a la pantalla de resumen
             }
+            break;
+
+            case 4: //resumen
+
             break;
         }
     }
@@ -70,10 +81,20 @@ var introSound;
             case 1:
 
             break;
+
             case 2:
                 gameScreen.tocoAlgo();
-                gameScreen.contaSemillas(); 
+                if(mouseX>800 && mouseX<1000 &&mouseY>0 && mouseY<530){
+                    this.pantalla = 3; //probando que funcione el cambio de pantalla
+                }
             break; 
+                           
+            case 3: //dimension
+                dimensionScreen.contaSemillas(); 
+                dimensionScreen.tocoSemillas();
+            break;
+
+            
     }
 }
 function mouseMoved(){

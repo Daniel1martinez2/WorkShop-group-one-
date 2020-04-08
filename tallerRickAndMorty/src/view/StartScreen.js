@@ -6,7 +6,6 @@ constructor(){
     this.start1;
     this.start2;
     this.startController =  new StartController();
-    //this.mainView = new MainView();
     this.estado= false; 
    
 }

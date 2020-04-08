@@ -39,20 +39,21 @@ class Logic{
     cargarTXT() {
         this.txtOriginal = loadStrings("data/Import/cuento.txt");
         this.rickImage = loadImage("img/ricknormi.png"); 
-        this.rickImageFeedBack =loadImage("img/ricknormiFeedBack.png"); 
-
+        this.rickImageFeedBack =loadImage("img/ricknormiFeedBack.png");         
+    }
+    cargaSemillas(){
         this.semilla5= loadImage("Objetos/Semillas-5.png") ; 
         this.semilla5Feed= loadImage("Objetos/SemillasFeed-5.png"); 
-
+    
         this.semilla1= loadImage("Objetos/Semillas-1.png") ; 
         this.semilla1Feed= loadImage("Objetos/SemillasFeed-1.png"); 
-
+    
         this.semilla2= loadImage("Objetos/Semillas-2.png") ; 
         this.semilla2Feed= loadImage("Objetos/SemillasFeed-2.png"); 
-
+    
         this.semilla3= loadImage("Objetos/Semillas-3.png") ; 
         this.semilla3Feed= loadImage("Objetos/SemillasFeed-3.png"); 
-
+    
         this.semilla4= loadImage("Objetos/Semillas-4.png") ; 
         this.semilla4Feed= loadImage("Objetos/SemillasFeed-4.png"); 
 
@@ -68,7 +69,18 @@ class Logic{
             console.log("Si hay rick")
             this.rickAndMorty = new RickYMorty(170,150,this.rickImage,this.rickImageFeedBack); 
         }
-        if (this.ensayo.includes("mega semillas")) {
+      
+        if (this.ensayo.includes("arma portal")) {//Aquí creamos por tal y arma
+            console.log("Si hay arma portal")
+             
+            this.gun;
+
+        }
+
+    }
+    recorrerTXTDimension(){
+        this.ensayo = join(this.txtOriginal, " ");
+        if (this.ensayo.includes("mega semillas")) {//OJO SI ESTO FUNCIONA
             this.semillas=[5]; 
             console.log("Si hay mega semillas")
             this.semillas[0]=new Seed(249,64,this.semilla1,this.semilla1Feed); 
@@ -78,44 +90,37 @@ class Logic{
             this.semillas[4]=new Seed(125,441,this.semilla5,this.semilla5Feed);
             
         }
-        if (this.ensayo.includes("arma portal")) {//Aquí creamos por tal y arma
-            console.log("Si hay arma portal")
-             
-            this.gun;
-
-        }
-
     }
-   
 
     test1DrawAnObject(){
         
-        this.rickAndMorty.pintar( ); 
+        this.rickAndMorty.pintar(); 
         this.rickAndMorty.sensibleArea(); 
 
+    }
+    drawSemillas(){
         if(this.dimension){  
-          for (let i = 0; i < this.semillas.length; i++) {
-          if(this.semillas[i].getSelected()==false){
-            this.semillas[i].pintar(); 
-          }
-          this.semillas[i].sensibleArea(); 
-        }
-  
-       }
+           // for (let i = 0; i < this.semillas.length; i++) {
+            //if(this.semillas[i].getSelected()==false){
+              //this.semillas[i].pintar(); 
+            //}
+           // this.semillas[i].sensibleArea(); 
+         // }
+    
+         }
     }
 
     muevoRick(c){
         this.rickAndMorty.move(c); 
     }
-
-    tocoalgo(){
-
+    tocoSemillas(){
         for (let i = 0; i < this.semillas.length; i++) {
            this.semillas[i].tocoClick(); 
           }
-        
+
+    }
+    tocoalgo(){
         this.rickAndMorty.tocoClick();
- 
     }
 
     getDimension() {
@@ -136,7 +141,7 @@ class Logic{
         return this.contadorSemillas;
     }
  
-    modificarTxt(){
+    modificarTxt(){//este metodo no esta en los controllers, va?
 
         if (this.rickAndMorty.getSelected()) {
             let palabras = "Rick and morty";
@@ -159,9 +164,7 @@ class Logic{
         }
 
     }
-
-
-    guardarNuevoTxt(){
+    guardarNuevoTxt(){//este tampoco
 
         saveStrings(this.ensayo, '../data/Import/CuentoModificado.txt');
         
