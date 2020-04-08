@@ -3,9 +3,7 @@ class DimensionController{
         this.logic = new Logic();
 
     }
-    tocoSemillas(){//ya
-        this.logic.tocoSemillas();
-    }
+    
     tocoAlgo(){//ya
         this.logic.tocoalgo(); 
     }
