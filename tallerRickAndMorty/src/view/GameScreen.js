@@ -26,10 +26,11 @@ class GameScreen{
 				this.contador1=1;
 			}
         }
-        image(this.mesa,0,0);
-      
-            this.gameController.dibujar(); 
+        
+        this.gameController.dibujar(); 
         this.gameController.drawPortal();
+        this.gameController.cambioPantalla();
+        image(this.mesa,0,0);
     }
   
     recorrerTXT(){
@@ -43,4 +44,8 @@ class GameScreen{
     tocoAlgo(){
         this.gameController.tocoAlgo(); 
     }
+    getPaso(){
+        return this.gameController.getPaso();
+    }
+
  }

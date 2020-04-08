@@ -38,6 +38,7 @@ class Logic {
         this.pisto2;
         this.conPisto;
         this.conPistoF;
+        this.paso = false;
 
     }
     cargarTXT() {
@@ -134,6 +135,13 @@ class Logic {
         this.gun.setPintoSalida(b);
 
     }
+    cambioPantalla(){
+        if(this.rickAndMorty.getPosX() >=600 ){
+            this.gun.setPintoSalida(false);
+            this.paso = true;
+        }
+    }
+   
     drawSemillas() {
         if (this.dimension) {
             for (let i = 0; i < this.semillas.length; i++) {

@@ -52,7 +52,11 @@ function draw() {
 
         case 2:   //garaje    
             gameScreen.pintarFondo1();
-            text("X: " + mouseX + " Y: " + mouseY, mouseX, mouseY);
+            console.log(gameScreen.getPaso())
+            if(gameScreen.getPaso() == true){
+                this.pantalla = 3;
+            }
+            //text("X: " + mouseX + " Y: " + mouseY, mouseX, mouseY);
             break;
 
         case 3: //dimension

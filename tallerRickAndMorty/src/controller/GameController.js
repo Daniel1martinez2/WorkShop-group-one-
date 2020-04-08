@@ -27,6 +27,12 @@ class GameController{
     drawPortal(){
         this.logic.drawPortal();
     }
+    cambioPantalla(){
+        this.logic.cambioPantalla();
+    }
+    getPaso(){
+       return this.logic.paso;
+    }
     
    
 }
