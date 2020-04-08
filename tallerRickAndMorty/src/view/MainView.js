@@ -54,6 +54,7 @@ function draw() {
 
         case 2:   //garaje    
             gameScreen.pintarFondo1();
+            gameScreen.setUltimo(millis()); 
             //console.log(gameScreen.getPaso())
             if(gameScreen.getPaso() == true){
                 this.pantalla = 3;
