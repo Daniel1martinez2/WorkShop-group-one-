@@ -46,11 +46,17 @@ class DimensionController{
     drawPortal(){
         this.logic.drawPortal();
     }
-    cambioPantalla2(){
-        this.logic.cambioPantalla2();
-    }
-    getPaso2(){
-        return this.logic.paso2;
-    }
+    getPaso(){
+        return this.logic.paso;
+     }
+
+     getPaso2(){
+         return this.logic.paso2; 
+     }
+
+     cambioPantalla2(){
+         this.logic.cambioPantalla2(); 
+     }
+  
    
 }

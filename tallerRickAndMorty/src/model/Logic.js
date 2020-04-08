@@ -44,6 +44,7 @@ class Logic {
 
         this.gano = false;
 
+
     }
     cargarTXT() {
         this.txtOriginal = loadStrings("data/Import/cuento.txt");
@@ -255,6 +256,7 @@ class Logic {
         }
 
     }
+  
 
 }
 

@@ -33,7 +33,7 @@ class GameController{
         this.logic.cambioPantalla();
     }
     getPaso(){
-       return this.logic.paso;
+       return this.logic.paso;  
     }
     
    
