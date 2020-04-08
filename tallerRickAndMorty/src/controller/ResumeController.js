@@ -1,11 +1,11 @@
 class ResumeController{
     constructor(){
-        this.app; 
         this.model = new Logic();
     }
 
     getGano(){
-        return this.model.getGano();
+        console.log(this.model.gano +"triple hp");
+        return this.model.gano;
     }
     guardarTXT(){
         this.model.guardarNuevoTxt();

@@ -43,7 +43,7 @@ class ResumeScreen{
 				this.contador3=1;
 			}
         }
-        if (this.resumeController.getGano()) {
+        if (this.resumeController.getGano()==true) {
             image(this.ganaste,0,this.posYimagenes)
         }else{
             image(this.perdiste,0,this.posYimagenes)
