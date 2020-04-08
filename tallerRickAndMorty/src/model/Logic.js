@@ -110,8 +110,8 @@ class Logic {
         }
     }
     pistolaRick() {
-        console.log((this.rickAndMorty.getPosX() + 40));
-        console.log(this.gun.getPosX());
+       // consoleconsole.log((this.rickAndMorty.getPosX() + 40));
+        //console.log(this.gun.getPosX());
         if (this.rickAndMorty.getAreaSensible() && this.gun.getSelected() == true) {
             this.rickAndMorty.setTengoArma(true);
             this.gun.setMeTienen(true);
