@@ -97,7 +97,7 @@ function mouseClicked() {
         case 3: //dimension
             dimensionScreen.tocoAlgo();
             dimensionScreen.contaSemillas();
-            dimensionScreen.tocoSemillas();
+           // dimensionScreen.tocoSemillas();
             break;
 
 
