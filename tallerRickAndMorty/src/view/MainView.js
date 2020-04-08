@@ -26,7 +26,7 @@ function setup() {
     createCanvas(1000, 530);
     gameScreen.recorrerTXT();
     dimensionScreen.recorrerTXTDimension();
-    this.pantalla = 2;
+    this.pantalla = 0;
     introSound.play();
     introSound.setVolume(0.5);
 
