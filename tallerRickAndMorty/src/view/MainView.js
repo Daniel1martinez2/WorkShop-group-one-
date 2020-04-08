@@ -3,6 +3,7 @@ let startScreen = new StartScreen();
 let gameScreen = new GameScreen();
 let preIntro = new PreIntro();
 let dimensionScreen = new DimensionScreen();
+let resumeScreen = new ResumeScreen();
 let pantalla;
 var introSound;
 
@@ -16,6 +17,7 @@ function preload() {
     gameScreen.cargarTXT();
     dimensionScreen.cargarTXT();
     dimensionScreen.cargaImagenesDS();
+    resumeScreen.cargarImagenesRS();
     this.introSound = loadSound("sfx/IntroSound.mp3");
 
 }
@@ -24,7 +26,7 @@ function setup() {
     createCanvas(1000, 530);
     gameScreen.recorrerTXT();
     dimensionScreen.recorrerTXTDimension();
-    this.pantalla = 2;
+    this.pantalla = 4;
     introSound.play();
     introSound.setVolume(0.5);
 
@@ -67,7 +69,9 @@ function draw() {
             break;
 
         case 4: //resumen
+            resumeScreen.pintarResume();
 
+        
             break;
     }
 }
@@ -99,7 +103,9 @@ function mouseClicked() {
             dimensionScreen.contaSemillas();
             dimensionScreen.tocoSemillas();
             break;
-
+        case 4:
+            resumeScreen.guardarTXT();
+        break;
 
     }
 }
@@ -115,12 +121,25 @@ function mouseMoved() {
         case 1:
 
             break;
+
+        case 4:
+            resumeScreen.moveBoton();
+        break;
     }
 }
 function keyPressed() {
     gameScreen.teclas(key);
     dimensionScreen.teclasDS(key);
+}
 
-
+function mouseWheel(){
+    switch (this.pantalla) {
+        case 4:
+            resumeScreen.parallax(event.delta);
+            break;
+       
+    }
+    
+    
 }
 

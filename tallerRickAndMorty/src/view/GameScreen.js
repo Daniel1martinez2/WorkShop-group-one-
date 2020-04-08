@@ -47,5 +47,8 @@ class GameScreen{
     getPaso(){
         return this.gameController.getPaso();
     }
+    getFondo(){
+        return this.fondo;
+    }
 
  }

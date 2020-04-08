@@ -5,6 +5,7 @@ class Logic {
         this.ensayo;
         this.ensa = [];
         this.arma;
+        this.nuevoTXT=[];
 
         this.ganaste;
         this.rickImage;
@@ -39,6 +40,8 @@ class Logic {
         this.conPisto;
         this.conPistoF;
         this.paso = false;
+
+        this.gano = false;
 
     }
     cargarTXT() {
@@ -77,7 +80,9 @@ class Logic {
     }
     recorrerTXT() {
         this.ensayo = join(this.txtOriginal, " ");
-        //this.ensa = split(this.ensayo, " ");
+        
+        console.log (this.ensayo);
+
         if (this.ensayo.includes("Rick and morty")) {
             console.log("Si hay rick")
             this.rickAndMorty = new RickYMorty(170, 150, this.rickImage, this.rickImageFeedBack, this.conPisto, this.conPistoF);
@@ -167,7 +172,7 @@ class Logic {
         for (let i = 0; i < this.semillas.length; i++) {
             this.semillas[i].tocoClick();
         }
-
+        this.modificarTxt();
     }
 
     getDimension() {
@@ -196,10 +201,10 @@ class Logic {
         }
         for (let se = 0; se < this.semillas.length; se++) {
 
-            let palabras = "mega semillas";
-            this.ensayo.replace(palabras, palabras.toUpperCase());
+            
             if (this.semillas[se].getSelected()) {
-
+                let palabras = "mega semillas";
+                this.ensayo.replace(palabras, palabras.toUpperCase());
                 break;
             }
 
@@ -212,8 +217,32 @@ class Logic {
 
     }
     guardarNuevoTxt() {//este tampoco
+        this.ensa = split(this.ensayo, " ");
 
-        saveStrings(this.ensayo, '../data/Import/CuentoModificado.txt');
+        saveStrings(this.ensa, 'CuentoModificado.txt');
+
+    }
+
+    getGano(){
+        return this.gano;
+    }
+
+    pintarResume(){
+        if (this.rickAndMorty.getSelected()) {
+            
+        }
+        for (let se = 0; se < this.semillas.length; se++) {
+
+            
+            if (this.semillas[se].getSelected()) {
+                
+            }
+
+        }
+
+        if (this.gun.getSelected()) {
+            
+        }
 
     }
 
