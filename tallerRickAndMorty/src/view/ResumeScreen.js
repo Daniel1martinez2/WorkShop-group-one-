@@ -88,8 +88,10 @@ class ResumeScreen{
             this.tocoBoton = true;
         }else{
             this.tocoBoton = false;
-        }
-
-            
+        }       
+    }
+    cargarTXT(){
+        
     }
 }
+

@@ -152,6 +152,8 @@ class Logic {
         if(this.rickAndMorty.getPosX() >=600 ){
             this.gun.setPintoSalida(false);
             this.paso2 = true;
+            this.recorrerTXT();
+            this.guardarNuevoTxt();
         }
     }
    
@@ -225,9 +227,10 @@ class Logic {
 
     }
     guardarNuevoTxt() {//este tampoco
-        this.ensa = split(this.ensayo, " ");
-
-        saveStrings(this.ensa, 'CuentoModificado.txt');
+        //this.ensa = split(this.ensayo, " ");
+        console.log(this.ensayo)
+        this.nuevoTXT[0] = this.ensayo;
+        saveStrings(this.nuevoTXT, 'CuentoModificado.txt');
 
     }
 

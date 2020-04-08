@@ -10,5 +10,13 @@ class ResumeController{
     guardarTXT(){
         this.model.guardarNuevoTxt();
     }
+    cargarTXT(){
+        this.model.cargarTXT();
+        this.model.cargarSemillas();
+    }
+    recorrerTXT(){
+        this.model.recorrerTXT();
+        this.model.recorrerTXTDimension();
+    }
   
 }
