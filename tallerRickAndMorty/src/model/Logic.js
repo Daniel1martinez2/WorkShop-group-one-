@@ -143,7 +143,7 @@ class Logic {
 
     }
     cambioPantalla(){
-        if(this.rickAndMorty.getPosX() >=600 && this.paso2 ==false){
+        if(this.rickAndMorty.getPosX() >=600){
             this.gun.setPintoSalida(false);
             this.paso = true;
         }

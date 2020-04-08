@@ -53,6 +53,10 @@ class DimensionController{
      getPaso2(){
          return this.logic.paso2; 
      }
+
+     cambioPantalla2(){
+         this.logic.cambioPantalla2(); 
+     }
   
    
 }
